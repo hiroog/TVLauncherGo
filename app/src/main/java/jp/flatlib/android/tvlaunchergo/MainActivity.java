@@ -98,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
 				}
 				String		name= pack.loadLabel( pm ).toString();
 				Drawable 	icon= pack.loadIcon( pm );
-				//Log.i( "launcher2", "app=" + name + ", pack=" + pack.activityInfo.packageName );
 				FileInfo	file_info= new FileInfo();
 				file_info.AppName= name;
 				file_info.AppIcon= icon;

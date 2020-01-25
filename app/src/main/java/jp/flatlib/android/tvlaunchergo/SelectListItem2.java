@@ -49,6 +49,8 @@ class SelectListItem2 implements View.OnClickListener, View.OnLongClickListener 
 		Intent intent= pm.getLaunchIntentForPackage( Info.PackageName );
 		if( intent != null ){
 			intent.addCategory( Intent.CATEGORY_LAUNCHER );
+			//intent.addFlags( Intent.FLAG_ACTIVITY_SINGLE_TOP );
+			intent.addFlags( Intent.FLAG_ACTIVITY_NEW_TASK );
 			mContext.startActivity( intent );
 		}
 	}
@@ -60,6 +62,8 @@ class SelectListItem2 implements View.OnClickListener, View.OnLongClickListener 
 		intent.setAction( Settings.ACTION_APPLICATION_DETAILS_SETTINGS );
 		intent.addCategory( Intent.CATEGORY_DEFAULT );
 		intent.setData( Uri.parse( "package:" + Info.PackageName ) );
+		//intent.addFlags( Intent.FLAG_ACTIVITY_SINGLE_TOP );
+		intent.addFlags( Intent.FLAG_ACTIVITY_NEW_TASK );
 		mContext.startActivity( intent );
 		return	true;
 	}

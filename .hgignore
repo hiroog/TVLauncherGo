@@ -14,3 +14,6 @@ captures
 .externalNativeBuild
 gradle
 .git
+app/build
+app/release
+app/debug
