@@ -3,10 +3,12 @@
 
 package jp.flatlib.android.tvlaunchergo;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -69,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
 		if( id == R.id.action_settings ){
 			startActivity( new Intent( Settings.ACTION_SETTINGS ) );
 			return	true;
+		}else if( id == R.id.action_exit ) {
+			finish();
 		}
 		return	super.onOptionsItemSelected(item);
 	}
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 			Intent intent= new Intent();
 			intent.addCategory( Intent.CATEGORY_LAUNCHER );
 			intent.setAction( Intent.ACTION_MAIN );
+			//List<ResolveInfo> package_list= pm.queryIntentActivities( intent, PackageManager.MATCH_ALL );
 			List<ResolveInfo> package_list= pm.queryIntentActivities( intent, 0 );
 			mFileList.clear();
 			for( ResolveInfo pack : package_list ){

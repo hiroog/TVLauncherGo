@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">TVLauncherGo</string>
+    <string name="app_name0">TVLauncherGo Small</string>
+    <string name="app_name2">TVLauncherGo Large</string>
     <string name="action_settings">Settings</string>
+    <string name="action_size_0">Resize: small</string>
+    <string name="action_size_1">Resize: middle</string>
+    <string name="action_size_2">Resize: large</string>
+    <string name="action_exit">Close</string>
 </resources>

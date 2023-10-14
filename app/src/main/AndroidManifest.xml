@@ -15,14 +15,67 @@
             android:label="@string/app_name"
             android:exported="true"
             android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="tablet" />
+            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="landscape" />
+            <layout android:defaultHeight="450dp"
+                android:defaultWidth="800dp"
+                android:gravity="top|end"
+                android:minHeight="300dp"
+                android:minWidth="300dp" />
+        </activity>
+        <activity
+            android:name=".MainActivity0"
+            android:label="@string/app_name0"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="tablet" />
+            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="landscape" />
+            <layout android:defaultHeight="450dp"
+                android:defaultWidth="500dp"
+                android:gravity="top|end"
+                android:minHeight="300dp"
+                android:minWidth="300dp" />
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/app_name2"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="WindowManagerPreference:FreeformWindowSize" android:value="tablet" />
+            <meta-data android:name="WindowManagerPreference:FreeformWindowOrientation" android:value="landscape" />
+            <layout android:defaultHeight="720dp"
+                android:defaultWidth="1280dp"
+                android:gravity="top|end"
+                android:minHeight="300dp"
+                android:minWidth="300dp" />
         </activity>
     </application>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
 
 </manifest>

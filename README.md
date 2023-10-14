@@ -1,27 +1,34 @@
-# Oculus Go 用の App Launcher
+# Meta Quest 用の App Launcher
 
-Oculus Go 上で一般の Android アプリを実行できるようにします。
+Meta Quest 上で一般の Android アプリを実行できるようにします。
 Android 設定画面も呼び出せます。
+また表示サイズを 3種類から選択できます。
+
+v1.1.1 で Meta Quest 3 に対応しました。
+
 
 ## Install
 
-Oculus Go に TVLauncher1.0.apk を install してください。
+何らかの方法を使って Quest 本体に apk をインストールしてください。
 
-### 詳細手順
+* Meta Quest に TVLauncher1.1.x.apk を install してください。
+* Oculus Go は以前のバージョンをお使いください。
 
-1. PC に Android SDK を install して adb command に PATH を通します
-2. Oculus Go を Developer Mode にして PC と USB 接続します
-3. adb command を使って TVLauncher1.0.apk を install します
 
-    adb install TVLauncher1.0.apk
 
 ## 使い方
 
-1. Oculus Go に Oculus TV を install しておいてください。
-2. Oculus TV を起動して、下の方にある "TVLauncherGo" を起動します。
+1. アプリライブラリを開き、検索欄をクリックしします。
+2. 右上のプルダウンから「すべて」を「提供元不明」に切り替えます。
+3. TVLauncherGo ～ を選択すると起動できます。
 
-Oculus Go に install されている一般の Android アプリが並んでいるのでクリックで実行できます。
+ウィンドウサイズを 3種類から選択することができます。
 
+* TVLauncherGo デフォルトサイズ
+* TVLauncherGo Large サイズ
+* TVLauncherGo Small サイズ
+
+インストールされているアプリ一覧が並ぶので選択すると起動できます。
 長押しでアプリ詳細画面に飛ぶので、そこで Uninstall もできます。
 
 
