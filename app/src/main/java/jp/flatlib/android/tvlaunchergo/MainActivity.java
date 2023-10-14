@@ -3,12 +3,12 @@
 
 package jp.flatlib.android.tvlaunchergo;
 
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.FeatureInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -99,6 +99,24 @@ public class MainActivity extends AppCompatActivity {
 			for( ResolveInfo pack : package_list ){
 				String	package_name= pack.activityInfo.packageName;
 				if( package_name == null ){
+					continue;
+				}
+				try{
+					boolean	found_feature= false;
+					PackageInfo package_info= pm.getPackageInfo( package_name, PackageManager.GET_CONFIGURATIONS );
+					if( package_info != null && package_info.reqFeatures != null ){
+						for( FeatureInfo feature : package_info.reqFeatures ){
+							if( feature.name != null ){
+								if( feature.name.equals( "android.hardware.vr.headtracking" ) ){
+									found_feature= true;
+								}
+							}
+						}
+					}
+					if( found_feature ){
+						continue;
+					}
+				}catch( PackageManager.NameNotFoundException e ){
 					continue;
 				}
 				String		name= pack.loadLabel( pm ).toString();

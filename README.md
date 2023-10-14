@@ -1,4 +1,4 @@
-# Meta Quest 用の App Launcher
+# Meta Quest 用の簡易 2D App Launcher
 
 Meta Quest 上で一般の Android アプリを実行できるようにします。
 Android 設定画面も呼び出せます。
@@ -29,7 +29,9 @@ v1.1.1 で Meta Quest 3 に対応しました。
 * TVLauncherGo Small サイズ
 
 インストールされているアプリ一覧が並ぶので選択すると起動できます。
+
 長押しでアプリ詳細画面に飛ぶので、そこで Uninstall もできます。
+
 
 
 # apk\_get.py について
